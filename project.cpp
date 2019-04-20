@@ -122,3 +122,88 @@ int evenodd()                                                       //function t
 
     return 0;
 }
+
+/*.............................................*/
+
+int perfect()                                                       //function to check whether the no. is perfect or not
+{
+	int n,i=1,sum=0;
+    cout << "Enter a number: ";
+    cin >> n;
+       while(i<n){
+       if(n%i==0)
+       sum=sum+i;
+       i++; 
+}
+ 
+if(sum==n)
+    cout << i << " is a perfect number\n"; 
+else
+    cout << i << " is not a perfect number\n"; 
+
+return 0;
+}
+
+int perfectsq()                                                    //function to check whether the number is perfect square or not
+{
+	int n;
+	cout<<"Enter a number"<<endl;
+	cin>>n;
+	
+	int r=1,i=1;
+	while(r<n)
+	{
+		i++;
+		r=i*i;
+	}
+	if(r==n)
+	cout<<n<<" is a perfect square";
+	else
+	cout<<n<<" is not a perfect square";
+	return 0;
+}
+
+int curoot()                                                       //function to check whether the number is perfect cube or not
+{
+	int num, curoot,ans; 
+
+ cout << "\n\n Check whether a number is a perfect cube or not: \n";
+ cout << " -----------------------------------------------------\n";
+    cout<<" Input a number: ";
+    cin>>num;
+curoot=round(pow(num, 1.0/3.0));
+
+if(curoot*curoot*curoot==num)
+{
+  cout<<" The number is a perfect Cube of "<<curoot<<endl;   
+}
+else
+{
+  cout<<" The number is not a perfect Cube."<<endl;   
+}
+}
+
+int power2()                                                         //function to check whether the no. is power of two or not
+{
+	int n;
+	
+    cout<<"Enter the number :";
+    cin>>n;
+
+    if(n>0)
+    {
+        while(n%2 == 0)
+        {
+            n/=2;
+        }
+        if(n == 1)
+        {
+            cout<<"Number is power of 2"<<endl;
+        }
+    }
+    if(n == 0 || n != 1)
+    {
+        cout<<"Number is not power of 2"<<endl;
+    }
+    return 0;
+}
