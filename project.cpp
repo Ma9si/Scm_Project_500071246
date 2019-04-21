@@ -446,7 +446,163 @@ int sumelement()                                                   //function to
   cout<<sum;
 }
 
+/*...............................................*/
 
+int length()                                            //function to find length of string
+{
+	int i,count=0;
+   char ch[20];
+   
+   cout<<"Enter any string: ";
+   cin>>ch;
+   for(i=0;ch[i]!='\0';i++)
+   {
+   count++;
+   }
+   cout<<"String Length: "<<count;
+}
+
+/*................................................*/
+
+int compare()                                            //function to compare two strings
+{
+	 char str1[20],str2[20],i,j,flag=0;
+ 
+ cout<<"Enter first string: ";
+ gets(str1);
+ cout<<"Enter Second string: ";
+ gets(str2);
+ i=0;
+ j=0;
+  while(str1[i]!='\0')
+  {
+   i++;
+  }
+  while(str2[j]!='\0')
+  {
+   j++;
+  }
+ if(i!=j)
+ {
+ flag=0;
+ }
+ else
+ {
+ for(i=0,j=0;str1[i]!='\0',str2[j]!='\0';i++,j++)
+ {
+ if(str1[i]==str2[j])
+ {
+ flag=1;
+ }
+ }
+ }
+ if(flag==0)
+ {
+ cout<<"Strings are not equal";
+ }
+ else
+ {
+ cout<<"Strings are equal";
+ }
+}
+
+/*............................................*/
+
+int reverse()                                                       //function to reverse the string
+{
+
+char str[100],temp;
+ int i,j=0;
+ 
+ cout<<"Enter any the string :";
+ gets(str);  //  gets function for input string
+ i=0;
+ j=strlen(str)-1;
+  while(i<j)
+   {
+   temp=str[i];
+   str[i]=str[j];
+   str[j]=temp;
+   i++;
+   j--;
+   }
+ cout<<"Reverse string is: "<<str;
+}
+
+/*................................................*/
+
+int frequency()                                        //function to count frequency of characters
+{
+	int i,count=0;
+   char ch[20],c;
+   
+   cout<<"Enter Any String: ";
+   gets(ch);
+   cout<<"Enter any Character form string: ";
+   cin>>c;
+   for(i=0;ch[i]!='\0';i++)
+   {
+   if(ch[i]==c)
+   count++;
+   }
+   if(count==0)
+   {
+   cout<<"Given character not found";
+   }
+   else
+   {
+   cout<<"Repetition of " <<c<<" "<<count<<" times";
+   }
+}
+
+/*...................................................*/
+
+int concatenate()                                           //function to concatenate two strings
+{
+	char str1[100] = "upes";
+   char str2[100] = "devops";
+   int i,j;
+   cout<<"String 1: "<<str1<<endl;
+   cout<<"String 2: "<<str2<<endl;
+   for(i = 0; str1[i] != '\0'; ++i);
+      j=0;
+   while(str2[j] != '\0') {
+      str1[i] = str2[j];
+      i++;
+      j++;
+   }
+   str1[i] = '\0';
+   cout<<"String after concatenation: "<<str1;
+   return 0;
+}
+
+/*....................................................*/
+
+
+int vowcon()                                               //function to count no of vowels and consonants in string
+   {
+   
+   char str[50];
+    int v = 0, c = 0, n = 0, s = 0;
+    cout << "Enter a string : ";
+    gets(str);
+    for (int i = 0; str[i]!='\0'; ++i)
+    {
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+            ++v;
+        else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+                ++c;
+             else if (str[i] >= '0' && str[i] <= '9')
+                      ++n;
+                  else
+                      ++s;
+    }
+    cout << "Number of vowels : " << v;
+    cout << "\nNumber of consonants : " << c;
+    cout << "\nNumber of numbers :" << n;
+    cout << "\nNumber of special characters : " << s;
+    return 0;
+}	
   
 
 
