@@ -207,3 +207,247 @@ int power2()                                                         //function 
     }
     return 0;
 }
+
+/*.....................................................*/
+
+int sortarray()                                                    //function to sort elements in array in ascending order
+{
+    int arr[100];
+    int size, i, j, temp;
+ 
+    // Reading the size of the array
+    cout<<"Enter size of array: ";
+    cin>>size;
+ 
+    //Reading elements of array
+    cout<<"Enter elements in array: ";
+    for(i=0; i<size; i++)
+    {
+        cin>>arr[i];
+    }
+    //Sorting an array in ascending order
+    for(i=0; i<size; i++)
+    {
+        for(j=i+1; j<size; j++)
+        {
+            //If there is a smaller element found on right of the array then swap it.
+            if(arr[j] < arr[i])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    //Printing the sorted array in ascending order
+    cout<<"Elements of array in sorted ascending order:"<<endl;
+    for(i=0; i<size; i++)
+    {
+        cout<<arr[i]<<endl;
+    }
+ 
+    return 0;
+}
+
+/*....................................................*/
+
+int addmatrix()                                                  //function for addition of two matrix
+{
+	int x[3][3],y[3][3],z[3][3],i,j;
+cout<<"ENTER ELEMENTS OF 1st MATRIX\n";
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+cin>>x[i][j];
+}
+cout<<"ENTER ELEMENTS OF 2nd MATRIX\n";
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+cin>>y[i][j];
+}
+cout<<"MATRIX [X]";
+for(i=0;i<3;i++)
+{
+cout<<"\n\n";
+for(j=0;j<3;j++)
+cout<<x[i][j]<<"\t";
+}
+cout<<"\nMATRIX [Y]";
+for(i=0;i<3;i++)
+{
+cout<<"\n\n";
+for(j=0;j<3;j++)
+cout<<y[i][j]<<"\t";
+}
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+z[i][j]=x[i][j]+y[i][j];
+}
+cout<<"\nMATRIX [Z]";
+for(i=0;i<3;i++)
+{
+cout<<"\n\n";
+for(j=0;j<3;j++)
+cout<<z[i][j]<<"\t";
+}
+}
+
+/*...........................................*/
+
+int mergearray()                                                    //function to merge any array
+{
+int a[10],b[10],c[20],i;
+   
+   cout<<"Enter Elements in 1st Array: ";
+   for(i=0;i<10;i++)
+   {
+   cin>>a[i];
+   }
+   cout<<"Enter Elements in 2nd Array: ";
+   for(i=0;i<10;i++)
+   {
+   cin>>b[i];
+   }
+   cout<<"\nElements of Array After Merge: ";
+   for(i=0;i<10;i++)
+   {
+    c[i]=a[i];
+    c[i+10]=b[i];
+   }
+   for(i=0;i<20;i++)
+   {
+   cout<<c[i]<<"\t";
+   }
+}
+
+/*.............................................*/
+
+int insert()                                                       //function to insert an element in array
+{
+	 int i,a[5],no,pos;
+  cout<<"Enter data in Array: ";
+  for(i=0;i<5;i++)
+  {
+  cin>>a[i];
+  }
+  cout<<"\n\nStored Data in Array: ";
+  for(i=0;i<5;i++)
+  {
+  cout<<a[i];
+  }
+  cout<<"\n\nEnter position to insert number: ";
+  cin>>pos;
+  if(pos>5)
+  {
+  cout<<"\n\nThis is out of range";
+  }
+  else
+  {
+  cout<<"\n\nEnter new number: ";
+  cin>>no;
+  --pos;
+  for(i=5;i>=pos;i--)
+  {
+  a[i+1]=a[i];
+  }
+  a[pos]=no;
+  cout<<"\n\nNew data in Array: ";
+  for(i=0;i<6;i++)
+  {
+  cout<<a[i];
+  }
+  }
+}
+
+/*............................................*/
+
+int Delete()                                                     //function to delete an element in array
+{
+	int i,a[5],no,pos;
+   cout<<"Enter Data in Array: ";
+   for(i=0;i<5;i++)
+   {
+    cin>>a[i];
+   }
+   cout<<"\n\nStored Data in Array:  ";
+   for(i=0;i<5;i++)
+   {
+    cout<<a[i];
+   }
+   cout<<"\n\nEnter poss. of Element to Delete: ";
+   cin>>pos;
+   if(pos>5)
+   {
+   cout<<"\n\nThis value is out of range: ";
+   }
+   else
+   {
+   --pos;
+   for(i=pos;i<=4;i++)
+   {
+    a[i]=a[i+1];
+   }
+   cout<<"\n\nNew Data in Array: ";
+   for(i=0;i<4;i++)
+   {
+    cout<<a[i];
+  }
+  }
+}
+
+/*.................................................*/
+
+int revarray()                                                     //function to reverse an array
+{
+	int a[20],b[20],i,j,n;
+   cout<<"How many elements you want to enter: ";
+   cin>>n;
+   cout<<"Enter any "<<n<<" elements in Array: ";
+   for(i=0; i<n ;i++)
+   {
+   cin>>a[i];
+   }
+   cout<<"Reverse of Array: ";
+
+   for(i=n-1,j=0; i>=0;i--,j++)
+   {
+    b[i]=a[j];
+   }
+   for(i=0; i<n ;i++)
+   {
+   cout<<b[i];
+   }
+}
+ 
+/*.................................................*/
+
+int sumelement()                                                   //function to find sum of an array elements
+{
+	 int arr[20],i,n,sum=0;
+   
+   cout<<"How many elements you want to enter: ";
+   cin>>n;
+   cout<<"Enter any "<<n<<" elements in Array: ";
+   for(i=0;i<n;i++)
+   {
+   cin>>arr[i];
+   }
+   cout<<"Sum of all Elements are: ";
+
+   for(i=0;i<n;i++)
+   {
+    sum=sum+arr[i];
+   }
+   for(i=0;i<n;i++)
+   {
+   }
+  cout<<sum;
+}
+
+
+  
+
+
+
