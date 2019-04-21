@@ -467,7 +467,7 @@ int length()                                            //function to find lengt
 int compare()                                            //function to compare two strings
 {
 	 char str1[20],str2[20],i,j,flag=0;
- clrscr();
+ 
  cout<<"Enter first string: ";
  gets(str1);
  cout<<"Enter Second string: ";
@@ -506,6 +506,28 @@ int compare()                                            //function to compare t
  }
 }
 
+/*............................................*/
+
+int reverse()                                                       //function to reverse the string
+{
+
+char str[100],temp;
+ int i,j=0;
+ 
+ cout<<"Enter any the string :";
+ gets(str);  //  gets function for input string
+ i=0;
+ j=strlen(str)-1;
+  while(i<j)
+   {
+   temp=str[i];
+   str[i]=str[j];
+   str[j]=temp;
+   i++;
+   j--;
+   }
+ cout<<"Reverse string is: "<<str;
+}
 
   
 
