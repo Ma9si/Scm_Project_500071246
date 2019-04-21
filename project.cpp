@@ -535,7 +535,7 @@ int frequency()                                        //function to count frequ
 {
 	int i,count=0;
    char ch[20],c;
-   clrscr();
+   
    cout<<"Enter Any String: ";
    gets(ch);
    cout<<"Enter any Character form string: ";
@@ -553,6 +553,27 @@ int frequency()                                        //function to count frequ
    {
    cout<<"Repetition of " <<c<<" "<<count<<" times";
    }
+}
+
+/*...................................................*/
+
+int concatenate()                                           //function to concatenate two strings
+{
+	char str1[100] = "upes";
+   char str2[100] = "devops";
+   int i,j;
+   cout<<"String 1: "<<str1<<endl;
+   cout<<"String 2: "<<str2<<endl;
+   for(i = 0; str1[i] != '\0'; ++i);
+      j=0;
+   while(str2[j] != '\0') {
+      str1[i] = str2[j];
+      i++;
+      j++;
+   }
+   str1[i] = '\0';
+   cout<<"String after concatenation: "<<str1;
+   return 0;
 }
 
   
