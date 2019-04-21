@@ -446,6 +446,22 @@ int sumelement()                                                   //function to
   cout<<sum;
 }
 
+/*...............................................*/
+
+int length()                                        //function to find length of string
+{
+	int i,count=0;
+   char ch[20];
+   
+   cout<<"Enter any string: ";
+   cin>>ch;
+   for(i=0;ch[i]!='\0';i++)
+   {
+   count++;
+   }
+   cout<<"String Length: "<<count;
+}
+
 
   
 
