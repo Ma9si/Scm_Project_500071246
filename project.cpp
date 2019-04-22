@@ -583,6 +583,7 @@ int concatenate()                                           //function to concat
 
 
 int vowcount()                                               //function to count no of vowels and consonants in string
+
    {
    
    char str[50];
