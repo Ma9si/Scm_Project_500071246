@@ -325,7 +325,8 @@ int a[10],b[10],c[20],i;
 
 /*.............................................*/
 
-int insertelement()                                                       //function to insert an element in array
+
+int insertelement()                                                       //function to insert an element in array                                                     //function to insert an element in arr
 {
 	 int i,a[5],no,pos;
   cout<<"Enter data in Array: ";
@@ -363,6 +364,7 @@ int insertelement()                                                       //func
 }
 
 /*............................................*/
+
 
 int Deletelement()                                                     //function to delete an element in array
 {
