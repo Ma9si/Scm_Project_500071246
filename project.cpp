@@ -647,4 +647,61 @@ void stack()                                                   //function to imp
     
 }
 
+/*...............................................*/
+
+int upper()                                                           //function to convert lowercase string into upper case string
+{
+	char s[30];
+   int i;
+   //display a message to user to enter the string
+   cout<<"Enter the String in lowercase: "; 
+   //storing the string into the char array 
+   cin>>s;
+
+   /* running the loop from 0 to the length of the string
+    * to convert each individual char of string to uppercase
+    * by subtracting 32 from the ASCII value of each char
+    */
+   for(i=0;i<=strlen(s);i++) { 
+      /* Here we are performing a check so that only lowercase 
+       * characters gets converted into uppercase. 
+       * ASCII value of a to z(lowercase chars) ranges from 97 to 122 
+       */ 
+      if(s[i]>=97 && s[i]<=122)
+      {
+		s[i]=s[i]-32;
+      }
+   }
+   cout<<"The entered string in uppercase: "<<s;
+   return 0;
+}
+
+/*...................................................*/
+
+
+int temp()                                                            //function to convert input temperature into fahrenheit or celsius 
+{
+	int choice;
+float temp, Convtemp;
+cout <<"Temperature Conversion Menu: \n";
+cout << " 1. Fahrenheit to Celsius" << endl;
+cout << " 2. Celsius to Fahrenheit" << endl;
+cout << " Enter your choice: ";
+cin >> choice;
+if (choice == 1)
+{cout << "\n "<< " Enter Temp in Fahrenheit: " ;
+cin >> temp;
+Convtemp = (temp-32.0)/1.8;
+cout << " \n Temperature in Celsius is: " << Convtemp << endl;
+}
+else
+{cout << "\n "<< " Enter Temp in Celsius: " ;
+cin >> temp;
+Convtemp = (1.8*temp)+32.0;
+cout << " \n Temperature in Fahrenheit is: " << Convtemp;} 
+
+return 0;
+}
+
+/*.........................................*/
 
