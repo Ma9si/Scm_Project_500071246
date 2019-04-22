@@ -871,3 +871,67 @@ int Arrayelements()                                                    //Access 
 }
 
 /*...............................................*/
+
+//illustrate the use of the Void Pointer.
+
+ 
+int voidpointer()
+{
+void *ptr1,*ptr2,*ptr3,*ptr4;
+int i;
+char c;
+float f;
+double d;
+cout<<"Enter the integer value : ";
+cin>>i;
+cout<<endl;
+cout<<"Enter the charater: ";
+cin>>c;
+cout<<endl;
+cout<<"Enter the float value: ";
+cin>>f;
+cout<<endl;
+cout<<"Enter the double value: ";
+cin>>d;
+cout<<endl;
+ 
+ptr1=&i;
+ptr2=&c;
+ptr3=&f;
+ptr4=&d;
+ 
+cout<<"Your entered integer address is: "<<ptr1<<endl;
+cout<<"Your entered character address is: "<<ptr2<<endl;
+cout<<"Your entered float value address is: "<<ptr3<<endl;
+cout<<"Your entered double value address  is: "<<ptr4<<endl;
+ 
+
+}
+
+
+//function to display address of elements of an array using both array and pointers
+
+
+int address()
+{
+    float arr[5];
+    float *ptr;
+    
+    cout << "Displaying address using arrays: " << endl;
+    for (int i = 0; i < 5; ++i)
+    {
+        cout << "&arr[" << i << "] = " << &arr[i] << endl;
+    }
+
+    // ptr = &arr[0]
+    ptr = arr;
+
+    cout<<"\nDisplaying address using pointers: "<< endl;
+    for (int i = 0; i < 5; ++i)
+    {
+        cout << "ptr + " << i << " = "<< ptr + i << endl;
+    }
+
+    return 0;
+
+}
