@@ -1,4 +1,5 @@
 #include<iostream>
+#include "stack_header.h"
 using namespace std;
 
 
@@ -324,7 +325,8 @@ int a[10],b[10],c[20],i;
 
 /*.............................................*/
 
-int insert()                                                       //function to insert an element in array
+
+int insertelement()                                                       //function to insert an element in array                                                     //function to insert an element in arr
 {
 	 int i,a[5],no,pos;
   cout<<"Enter data in Array: ";
@@ -363,7 +365,8 @@ int insert()                                                       //function to
 
 /*............................................*/
 
-int Delete()                                                     //function to delete an element in array
+
+int Deletelement()                                                     //function to delete an element in array
 {
 	int i,a[5],no,pos;
    cout<<"Enter Data in Array: ";
@@ -446,8 +449,381 @@ int sumelement()                                                   //function to
   cout<<sum;
 }
 
+/*...............................................*/
 
+int length()                                            //function to find length of string
+{
+	int i,count=0;
+   char ch[20];
+   
+   cout<<"Enter any string: ";
+   cin>>ch;
+   for(i=0;ch[i]!='\0';i++)
+   {
+   count++;
+   }
+   cout<<"String Length: "<<count;
+}
+
+/*................................................*/
+
+int compare()                                            //function to compare two strings
+{
+	 char str1[20],str2[20],i,j,flag=0;
+ 
+ cout<<"Enter first string: ";
+ gets(str1);
+ cout<<"Enter Second string: ";
+ gets(str2);
+ i=0;
+ j=0;
+  while(str1[i]!='\0')
+  {
+   i++;
+  }
+  while(str2[j]!='\0')
+  {
+   j++;
+  }
+ if(i!=j)
+ {
+ flag=0;
+ }
+ else
+ {
+ for(i=0,j=0;str1[i]!='\0',str2[j]!='\0';i++,j++)
+ {
+ if(str1[i]==str2[j])
+ {
+ flag=1;
+ }
+ }
+ }
+ if(flag==0)
+ {
+ cout<<"Strings are not equal";
+ }
+ else
+ {
+ cout<<"Strings are equal";
+ }
+}
+
+/*............................................*/
+
+int reverse()                                                       //function to reverse the string
+{
+
+char str[100],temp;
+ int i,j=0;
+ 
+ cout<<"Enter any the string :";
+ gets(str);  //  gets function for input string
+ i=0;
+ j=strlen(str)-1;
+  while(i<j)
+   {
+   temp=str[i];
+   str[i]=str[j];
+   str[j]=temp;
+   i++;
+   j--;
+   }
+ cout<<"Reverse string is: "<<str;
+}
+
+/*................................................*/
+
+int frequency()                                        //function to count frequency of characters
+{
+	int i,count=0;
+   char ch[20],c;
+   
+   cout<<"Enter Any String: ";
+   gets(ch);
+   cout<<"Enter any Character form string: ";
+   cin>>c;
+   for(i=0;ch[i]!='\0';i++)
+   {
+   if(ch[i]==c)
+   count++;
+   }
+   if(count==0)
+   {
+   cout<<"Given character not found";
+   }
+   else
+   {
+   cout<<"Repetition of " <<c<<" "<<count<<" times";
+   }
+}
+
+/*...................................................*/
+
+int concatenate()                                           //function to concatenate two strings
+{
+	char str1[100] = "upes";
+   char str2[100] = "devops";
+   int i,j;
+   cout<<"String 1: "<<str1<<endl;
+   cout<<"String 2: "<<str2<<endl;
+   for(i = 0; str1[i] != '\0'; ++i);
+      j=0;
+   while(str2[j] != '\0') {
+      str1[i] = str2[j];
+      i++;
+      j++;
+   }
+   str1[i] = '\0';
+   cout<<"String after concatenation: "<<str1;
+   return 0;
+}
+
+/*....................................................*/
+
+
+int vowcount()                                               //function to count no of vowels and consonants in string
+
+   {
+   
+   char str[50];
+    int v = 0, c = 0, n = 0, s = 0;
+    cout << "Enter a string : ";
+    gets(str);
+    for (int i = 0; str[i]!='\0'; ++i)
+    {
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+            ++v;
+        else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+                ++c;
+             else if (str[i] >= '0' && str[i] <= '9')
+                      ++n;
+                  else
+                      ++s;
+    }
+    cout << "Number of vowels : " << v;
+    cout << "\nNumber of consonants : " << c;
+    cout << "\nNumber of numbers :" << n;
+    cout << "\nNumber of special characters : " << s;
+    return 0;
+}	
   
+/*....................................................*/
 
 
+void stack()                                                   //function to implement stack which includes user defined header file
+{
+   int ch, val; 
+   cout<<"1) Push in stack"<<endl;
+   cout<<"2) Pop from stack"<<endl;
+   cout<<"3) Display stack"<<endl;
+   cout<<"4) Exit"<<endl;
+   do {
+      cout<<"Enter choice: "<<endl;
+      cin>>ch;
+      switch(ch) {
+         case 1: {   
+            cout<<"Enter value to be pushed:"<<endl;
+            cin>>val;
+             push(val);
+            break;
+         }
+         case 2: {
+            pop();
+            break;
+         }
+         case 3: {
+            display();
+            break;
+         }
+         case 4: {
+            cout<<"Exit"<<endl;
+            break;
+         }
+         default: {
+            cout<<"Invalid Choice"<<endl;
+         }
+      }
+   }while(ch!=4); 
+    
+}
 
+/*...............................................*/
+
+int upper()                                                           //function to convert lowercase string into upper case string
+{
+	char s[30];
+   int i;
+   //display a message to user to enter the string
+   cout<<"Enter the String in lowercase: "; 
+   //storing the string into the char array 
+   cin>>s;
+
+   /* running the loop from 0 to the length of the string
+    * to convert each individual char of string to uppercase
+    * by subtracting 32 from the ASCII value of each char
+    */
+   for(i=0;i<=strlen(s);i++) { 
+      /* Here we are performing a check so that only lowercase 
+       * characters gets converted into uppercase. 
+       * ASCII value of a to z(lowercase chars) ranges from 97 to 122 
+       */ 
+      if(s[i]>=97 && s[i]<=122)
+      {
+		s[i]=s[i]-32;
+      }
+   }
+   cout<<"The entered string in uppercase: "<<s;
+   return 0;
+}
+
+/*...................................................*/
+
+
+int temp()                                                            //function to convert input temperature into fahrenheit or celsius 
+{
+	int choice;
+float temp, Convtemp;
+cout <<"Temperature Conversion Menu: \n";
+cout << " 1. Fahrenheit to Celsius" << endl;
+cout << " 2. Celsius to Fahrenheit" << endl;
+cout << " Enter your choice: ";
+cin >> choice;
+if (choice == 1)
+{cout << "\n "<< " Enter Temp in Fahrenheit: " ;
+cin >> temp;
+Convtemp = (temp-32.0)/1.8;
+cout << " \n Temperature in Celsius is: " << Convtemp << endl;
+}
+else
+{cout << "\n "<< " Enter Temp in Celsius: " ;
+cin >> temp;
+Convtemp = (1.8*temp)+32.0;
+cout << " \n Temperature in Fahrenheit is: " << Convtemp;} 
+
+return 0;
+}
+
+/*.........................................*/
+
+
+int character()                                           //function to convert number into character
+{
+	long int n,sum=0,r;    
+cout<<"Enter the Number= ";    
+cin>>n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum*10+r;    
+n=n/10;    
+}    
+n=sum;    
+while(n>0)    
+{    
+r=n%10;    
+switch(r)    
+{    
+case 1:    
+cout<<"one ";    
+break;    
+case 2:    
+cout<<"two ";    
+break;    
+case 3:    
+cout<<"three ";  
+break;    
+case 4:    
+cout<<"four ";  
+break;    
+case 5:    
+cout<<"five ";  
+break;    
+case 6:    
+cout<<"six ";   
+break;    
+case 7:  
+cout<<"seven ";  
+break;  
+case 8:    
+cout<<"eight ";    
+break;    
+case 9:    
+cout<<"nine ";  
+break;    
+case 0:    
+cout<<"zero ";  
+break;    
+default:    
+cout<<"tttt ";    
+break;    
+}    
+n=n/10;    
+}    
+}
+
+/*..........................................*/
+
+
+int feet()                                                       //function to convert feet into inches
+ {
+   // Declare Variables
+   int f, i = 0;
+
+   cout << "Simple C++ Program : Convert Feet to Inches\n";
+
+   //Read Feet Value
+   cout << "\nEnter feet : ";
+   cin>>f;
+
+   //Converting into inches
+   i = f * 12;
+
+   //Print Total Inches
+   cout << "\n\nTotal Inches : " << i;
+
+   
+   return (0);
+}
+
+/*...............................................*/
+
+
+int decimal()                                           //function to convert decimal into binary
+{  
+int a[10], n, i;    
+cout<<"Enter the number to convert: ";    
+cin>>n;    
+for(i=0; n>0; i++)    
+{    
+a[i]=n%2;    
+n= n/2;  
+}    
+cout<<"Binary of the given number= ";    
+for(i=i-1 ;i>=0 ;i--)    
+{    
+cout<<a[i];    
+}    
+}  
+
+/*..............................................*/
+
+
+int days()                                                             //function to convert days into years,weeks and days
+{
+
+	int days, years, weeks;
+
+	cout << "Enter days:";   // Read total number of days from user
+	cin >> days;
+    
+	years = (days / 365);
+	weeks = (days % 365) / 7;
+	days  = days - ((years * 365) + (weeks * 7));
+
+	cout << "Years : " << years <<endl;
+	cout << "weeks : " << weeks <<endl; 
+	cout << "Days : " << days <<endl;
+    
+	return 0;
+}
