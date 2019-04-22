@@ -973,5 +973,57 @@ int root()
 }
 }
 
+/*..........................................................*/
+
+
+int hcf()
+
+{
+    int i, num1, num2, min, HCF=1;
+ 
+    //Read two numbers from user
+    cout<<"Enter any two numbers:";
+    cin>>num1;
+    cin>>num2;
+ 
+    // Find min number between two numbers
+    min = (num1<num2) ? num1 : num2;
+ 
+    for(i=1; i<=min; i++)
+    {
+        if(num1%i==0 && num2%i==0)
+        {
+            HCF = i;
+        }
+    }
+ 
+    cout<<"HCF of "<<num1<< " and "<< num2<< " is: " <<HCF;
+    return 0;
+ 
+}
+
+/*.....................................................*/
+
+
+
+int gcd()
+{
+	int first_number;
+	cout<<"Enter First Number : ";
+	cin>>first_number;
+	int  second_number;
+	cout<<"Enter Second Number: ";
+	cin>>second_number;
+	int  gcd;
+	for (int i=1;i<=first_number&&i<=second_number;i++) {
+		if(first_number%i==0 && second_number%i == 0 ) {
+			gcd=i;
+		}
+	}
+	cout<<"Greatest Common Divison (GCD):"<<gcd<<endl;
+	return 0;
+}
+
+
 
 
