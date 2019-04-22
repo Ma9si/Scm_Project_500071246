@@ -582,7 +582,8 @@ int concatenate()                                           //function to concat
 /*....................................................*/
 
 
-int vowelcon()                                               //function to count no of vowels and consonants in string
+int vowcount()                                               //function to count no of vowels and consonants in string
+
    {
    
    char str[50];
@@ -647,4 +648,182 @@ void stack()                                                   //function to imp
     
 }
 
+/*...............................................*/
 
+int upper()                                                           //function to convert lowercase string into upper case string
+{
+	char s[30];
+   int i;
+   //display a message to user to enter the string
+   cout<<"Enter the String in lowercase: "; 
+   //storing the string into the char array 
+   cin>>s;
+
+   /* running the loop from 0 to the length of the string
+    * to convert each individual char of string to uppercase
+    * by subtracting 32 from the ASCII value of each char
+    */
+   for(i=0;i<=strlen(s);i++) { 
+      /* Here we are performing a check so that only lowercase 
+       * characters gets converted into uppercase. 
+       * ASCII value of a to z(lowercase chars) ranges from 97 to 122 
+       */ 
+      if(s[i]>=97 && s[i]<=122)
+      {
+		s[i]=s[i]-32;
+      }
+   }
+   cout<<"The entered string in uppercase: "<<s;
+   return 0;
+}
+
+/*...................................................*/
+
+
+int temp()                                                            //function to convert input temperature into fahrenheit or celsius 
+{
+	int choice;
+float temp, Convtemp;
+cout <<"Temperature Conversion Menu: \n";
+cout << " 1. Fahrenheit to Celsius" << endl;
+cout << " 2. Celsius to Fahrenheit" << endl;
+cout << " Enter your choice: ";
+cin >> choice;
+if (choice == 1)
+{cout << "\n "<< " Enter Temp in Fahrenheit: " ;
+cin >> temp;
+Convtemp = (temp-32.0)/1.8;
+cout << " \n Temperature in Celsius is: " << Convtemp << endl;
+}
+else
+{cout << "\n "<< " Enter Temp in Celsius: " ;
+cin >> temp;
+Convtemp = (1.8*temp)+32.0;
+cout << " \n Temperature in Fahrenheit is: " << Convtemp;} 
+
+return 0;
+}
+
+/*.........................................*/
+
+
+int character()                                           //function to convert number into character
+{
+	long int n,sum=0,r;    
+cout<<"Enter the Number= ";    
+cin>>n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum*10+r;    
+n=n/10;    
+}    
+n=sum;    
+while(n>0)    
+{    
+r=n%10;    
+switch(r)    
+{    
+case 1:    
+cout<<"one ";    
+break;    
+case 2:    
+cout<<"two ";    
+break;    
+case 3:    
+cout<<"three ";  
+break;    
+case 4:    
+cout<<"four ";  
+break;    
+case 5:    
+cout<<"five ";  
+break;    
+case 6:    
+cout<<"six ";   
+break;    
+case 7:  
+cout<<"seven ";  
+break;  
+case 8:    
+cout<<"eight ";    
+break;    
+case 9:    
+cout<<"nine ";  
+break;    
+case 0:    
+cout<<"zero ";  
+break;    
+default:    
+cout<<"tttt ";    
+break;    
+}    
+n=n/10;    
+}    
+}
+
+/*..........................................*/
+
+
+int feet()                                                       //function to convert feet into inches
+ {
+   // Declare Variables
+   int f, i = 0;
+
+   cout << "Simple C++ Program : Convert Feet to Inches\n";
+
+   //Read Feet Value
+   cout << "\nEnter feet : ";
+   cin>>f;
+
+   //Converting into inches
+   i = f * 12;
+
+   //Print Total Inches
+   cout << "\n\nTotal Inches : " << i;
+
+   
+   return (0);
+}
+
+/*...............................................*/
+
+
+int decimal()                                           //function to convert decimal into binary
+{  
+int a[10], n, i;    
+cout<<"Enter the number to convert: ";    
+cin>>n;    
+for(i=0; n>0; i++)    
+{    
+a[i]=n%2;    
+n= n/2;  
+}    
+cout<<"Binary of the given number= ";    
+for(i=i-1 ;i>=0 ;i--)    
+{    
+cout<<a[i];    
+}    
+}  
+
+/*..............................................*/
+
+
+int days()                                                             //function to convert days into years,weeks and days
+{
+
+	int days, years, weeks;
+
+	cout << "Enter days:";   // Read total number of days from user
+	cin >> days;
+    
+	years = (days / 365);
+	weeks = (days % 365) / 7;
+	days  = days - ((years * 365) + (weeks * 7));
+
+	cout << "Years : " << years <<endl;
+	cout << "weeks : " << weeks <<endl; 
+	cout << "Days : " << days <<endl;
+    
+	return 0;
+}
