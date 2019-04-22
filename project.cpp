@@ -787,3 +787,42 @@ int feet()                                                       //function to c
 
 /*...............................................*/
 
+
+int decimal()                                           //function to convert decimal into binary
+{  
+int a[10], n, i;    
+cout<<"Enter the number to convert: ";    
+cin>>n;    
+for(i=0; n>0; i++)    
+{    
+a[i]=n%2;    
+n= n/2;  
+}    
+cout<<"Binary of the given number= ";    
+for(i=i-1 ;i>=0 ;i--)    
+{    
+cout<<a[i];    
+}    
+}  
+
+/*..............................................*/
+
+
+int days()                                                             //function to convert days into years,weeks and days
+{
+
+	int days, years, weeks;
+
+	cout << "Enter days:";   // Read total number of days from user
+	cin >> days;
+    
+	years = (days / 365);
+	weeks = (days % 365) / 7;
+	days  = days - ((years * 365) + (weeks * 7));
+
+	cout << "Years : " << years <<endl;
+	cout << "weeks : " << weeks <<endl; 
+	cout << "Days : " << days <<endl;
+    
+	return 0;
+}
