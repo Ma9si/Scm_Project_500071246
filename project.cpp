@@ -1,4 +1,6 @@
 #include<iostream>
+#include<math.h>
+#include<string.h>
 #include "stack_header.h"
 using namespace std;
 
@@ -611,7 +613,7 @@ int vowcount()                                               //function to count
 /*....................................................*/
 
 
-void stack()                                                   //function to implement stack which includes user defined header file
+void stackdata()                                                   //function to implement stack which includes user defined header file
 {
    int ch, val; 
    cout<<"1) Push in stack"<<endl;
@@ -938,7 +940,7 @@ int address()
 
 /*..................................................*/
 
-int root()
+int root()                                                 //function to find roots of an quadratic equation
 {
 	{
 
@@ -976,7 +978,7 @@ int root()
 /*..........................................................*/
 
 
-int hcf()
+int hcf()                                                         //function to find hcf of two numbers
 
 {
     int i, num1, num2, min, HCF=1;
@@ -1006,7 +1008,7 @@ int hcf()
 
 
 
-int gcd()
+int gcd()                                                  //function to find gcd of two numbers
 {
 	int first_number;
 	cout<<"Enter First Number : ";
@@ -1028,7 +1030,7 @@ int gcd()
 /*........................................................*/
 
 
-int fibo()
+int fibo()                                                         //function to print fibonacci series
 {
 	int range, first = 0, second = 1, fibonacci=0;
 	cout << "range";
@@ -1051,7 +1053,94 @@ int fibo()
 
 
 
-
+int main()
+{
+	int x;
+	do{
+	
+	cout<<"Enter which no. of function you want to execute";
+	cin>>x;
+	switch(x)
+	{
+		case 1 : cout<<factorial();
+		break;
+		case 2 : prime();
+		break;
+		case 3 : pallindrome();
+		break;
+		case 4 : armstrong();
+		break;
+		case 5 : evenodd();
+		break;
+		case 6 : perfect();
+		break;
+		case 7 : perfectsq();
+		break;
+		case 8 : curoot();
+		break;
+		case 9 : power2();
+		break;
+		case 10 : sortarray();
+		break;
+		case 11 : addmatrix();
+		break;
+		case 12 : mergearray();
+		break;
+		case 13 : insertelement();
+		break;
+		case 14 : Deletelement();
+		break;
+		case 15 : revarray();
+		break;
+		case 16 : sumelement();
+		break;
+		case 17 : length();
+		break;
+		case 18 : compare();
+		break;
+		case 19 : reverse();
+		break;
+		case 20 : frequency();
+		break;
+		case 21 : concatenate();
+		break;
+		case 22 : vowcount();
+		break;
+		case 23 : stackdata();
+		break;
+		case 24 : upper();
+		break;
+		case 25 : temp();
+		break;
+		case 26 : character();
+		break;
+		case 27 : feet();
+		break;
+		case 28 : decimal();
+		break;
+		case 29 : days();
+		break;
+		case 30 : working();
+		break;
+		case 31 : Arrayelements();
+		break;
+		case 32 : voidpointer();
+		break;
+		case 33 : address();
+		break;
+		case 34  :root();
+		break;
+		case 35 : hcf();
+		break;
+		case 36 : gcd();
+		break;
+		case 37 : fibo();
+		break;
+		
+		}
+	
+}while(x);
+}
 
 
 
