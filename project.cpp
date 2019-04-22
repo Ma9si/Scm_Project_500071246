@@ -827,3 +827,47 @@ int days()                                                             //functio
     
 	return 0;
 }
+
+/*...............................................*/
+
+int working()                                                                           //C++ Program to demonstrate the working of pointer.
+ {                                                                       
+    int *pc, c;
+    
+    c = 5;
+    cout << "Address of c (&c): " << &c << endl;
+    cout << "Value of c (c): " << c << endl << endl;
+
+    pc = &c;    // Pointer pc holds the memory address of variable c
+    cout << "Address that pointer pc holds (pc): "<< pc << endl;
+    cout << "Content of the address pointer pc holds (*pc): " << *pc << endl << endl;
+    
+    c = 11;    // The content inside memory address &c is changed from 5 to 11.
+    cout << "Address pointer pc holds (pc): " << pc << endl;
+    cout << "Content of the address pointer pc holds (*pc): " << *pc << endl << endl;
+
+    *pc = 2; 
+    cout << "Address of c (&c): " << &c << endl;
+    cout << "Value of c (c): " << c << endl << endl;
+
+    return 0;
+}
+
+/*..............................................*/
+
+int Arrayelements()                                                    //Access Array Elements Using Pointer
+{
+   int data[5];
+   cout << "Enter elements: ";
+
+   for(int i = 0; i < 5; ++i)
+      cin >> data[i];
+
+   cout << "You entered: ";
+   for(int i = 0; i < 5; ++i)
+      cout << endl << *(data + i);
+
+   return 0;
+}
+
+/*...............................................*/
